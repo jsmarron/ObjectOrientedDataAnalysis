@@ -1,2 +1,3 @@
 # ObjectOrientedDataAnalysis
-Companion website for Oblect Oriented Data Analysis book by Marron &amp; Dryden
+Companion website for Object Oriented Data Analysis book by Marron &amp; Dryden
+
