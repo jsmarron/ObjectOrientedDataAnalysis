@@ -1,6 +1,6 @@
 disp('Running MATLAB script file OODAfig1p1.m') ;
 %
-%    Makes Figure 1.1 for Chapter 1 of the OODA book,
+%    Makes graphic similar to Figure 1.1 for Chapter 1 of the OODA book,
 %
 %    Modified version of:  OODAbookChp1FigA
 %
