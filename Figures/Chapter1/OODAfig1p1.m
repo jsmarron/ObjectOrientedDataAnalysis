@@ -103,8 +103,8 @@ else ;    %  Make main graphic
   %  Create png file
   %
     orient portrait ;
-    set(gcf,'PaperSize',[6.0, 5.0]) ; 
-    set(gcf,'PaperPosition',[0.25, 0.25, 5.5, 4.5]) ; 
+    set(gcf,'PaperSize',[12.0, 5.0]) ; 
+    set(gcf,'PaperPosition',[0.25, 0.25, 11.5, 4.5]) ; 
   print('-dpng','OODAfig1p1.png') ;
 
 

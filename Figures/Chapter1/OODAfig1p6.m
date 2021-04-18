@@ -1,11 +1,11 @@
-disp('Running MATLAB script file OODAfig1p2.m') ;
+disp('Running MATLAB script file OODAfig1p6.m') ;
 %
-%    Makes graphic similar to Figure 1.1 for Chapter 1 of the OODA book,
+%    Makes graphic similar to Figure 1.6 for Chapter 1 of the OODA book,
 %
-%    Modified version of:  OODAbookChp1FigB
+%    Modified version of:  OODAbookChp1FigF
 %
 %    Spanish Male Mortality Data:
-%        Raw data curves, Rainbow colors
+%        PC1-2 Scatterplot, Rainbow colors
 %
 %    Data are in Excel file:
 %        ObjectOrientedDataAnalysis\DataSets\SpanishMaleMortalityData.xlsx
@@ -28,6 +28,7 @@ mdata = xlsread('..\..\DataSets\SpanishMaleMortalityData.xlsx','Sheet1','B2:CR11
 tmdata = mdata(1:99,:) ;
     %  take first 99 rows
 
+
 figure(1) ;
 clf ;
 
@@ -35,18 +36,24 @@ clf ;
 %  Generate Main Graphics
 %
 icolor = RainbowColorsQY(size(tmdata,2)) ;
-paramstruct = struct('viout',1, ...
-                     'vipcplot',0, ...
-                     'vicolplot',1, ...
-                     'icolor',icolor, ...
-                     'dolhtseed',37402983, ...
-                     'isingleaxis',1, ...
+
+n = size(tmdata,2) ;
+paramstruct = struct('npc',2, ...
+                     'viout',[0 1], ...
                      'iscreenwrite',1) ;
-curvdatSM(log10(tmdata),paramstruct) ;
+outstruct = pcaSM(log10(tmdata),paramstruct) ;
+meigvec = getfield(outstruct,'meigvec') ;
+
+idataconn = [(1:(n-1))' (2:n)'] ;
+idataconncolor = RainbowColorsQY(size(tmdata,2)-1) ;
+paramstruct = struct('icolor',icolor, ...
+                     'idataconn',idataconn, ...
+                     'idataconncolor',idataconncolor, ...
+                     'xlabelstr','PC1 Scores', ...
+                     'ylabelstr','PC2 Scores', ...
+                     'iscreenwrite',1) ;
+projplot2SM(log10(tmdata) - mean(log10(tmdata),2) * ones(1,n),meigvec,paramstruct) ;
 vax = axis ;
-xlabel('age') ;
-ylabel('log_{10}(mortality)') ;
-set(get(gca,'Title'),'String',[])
 
 %  Change Line Widths
 vchil = get(gca,'Children') ;
@@ -55,22 +62,12 @@ for i = 1:length(vchil) ;
 end ;
 
 
-%  Add Colorbar
-%
-colorbar ;
-set(gcf,'Colormap',icolor) ;
-vcf = get(gcf,'Children') ;
-YTL = strvcat('1917','1927','1937','1947','1957','1967','1977','1987','1997') ;
-set(vcf(1),'YTickLabel',YTL) ;
-
-
 %  Create png file
 %
   orient portrait ;
   set(gcf,'PaperSize',[7.0, 5.0]) ; 
   set(gcf,'PaperPosition',[0.25, 0.25, 6.5, 4.5]) ; 
-print('-dpng','OODAfig1p2.png') ;
-
+print('-dpng','OODAfig1p6.png') ;
 
 
 
