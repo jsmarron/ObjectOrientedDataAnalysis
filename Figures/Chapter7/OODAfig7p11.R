@@ -14,8 +14,6 @@ library(shapes)
 library(rgl)
 set.seed(10)
 
-#Change to your local directory
-setwd("/Users/pmzild/OneDrive - The University of Nottingham/tex/OODA/OODA-web/Figures/Chapter7")
 
 #read in data
 tfc<-read.in("../../DataSets/DNA-12groups/TFC_P.x",22,3)

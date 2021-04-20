@@ -1,21 +1,17 @@
 #%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-# R code to reproduce Figure 7.13 from the book by 
+# R code to reproduce Figure 8.9 and 8.11 from the book by 
 # J.S. Marron and Ian L. Dryden on Object Oriented Data Analysis
 
-# Requires the shapes and rgl library installing: e.g. install.packages("shapes")
-
-# Note that this produces 3D rgl views, which are then rotated by hand 
-# to give the views in the Figure. 
+# Requires the shapes library installing:  install.packages("shapes")
 
 #%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 library(shapes)
+library(rgl)
 set.seed(10)
 
-#read in data
 tfc<-read.in("../../DataSets/DNA-12groups/TFC_P.x",22,3)
-
 
 thin<-tfc[,,(1:50)*50]
 
@@ -69,18 +65,32 @@ for ( i in 1:50){
 
 #with scaling
 
-shapes3d(dnarot,joinline=jj)
-shapes3d(procGPA(dnarot,scale=TRUE)$rotated,joinline=jj,col=3)
+#shapes3d(dnarot,joinline=jj)
+#shapes3d(procGPA(dnarot,scale=TRUE)$rotated,joinline=jj,col=3)
+
+#########################################################################################
 
 
-#ans<-procGPA(dnarot,scale=TRUE)
-#pairs(cbind(ans$size,ans$scores[,1:3]),labels=c("size","PC1","PC2","PC3"))
-#cor(ans$size,ans$scores[,1])
-# 0.5486125
-#cor(ans$size,ans$scores[,2])
-# 0.5984227
-#cor(ans$size,ans$scores[,3])
-# -0.4228053
+
+ans<-pnss3d( thin , sphere.type="BIC",  n.pc=20)
+
+#Figure 8.9
+
+aa<-plot3darcs(ans,c=1,pcno=1,view.theta=-45,view.phi=-50,type="pca")
+rgl.postscript("dna-pca1.pdf",fmt="pdf")
+aa<-plot3darcs(ans,c=1,pcno=2,view.theta=-45,view.phi=-50,type="pca")
+rgl.postscript("dna-pca2.pdf",fmt="pdf")
+aa<-plot3darcs(ans,c=1,pcno=3,view.theta=-45,view.phi=-50,type="pca")
+rgl.postscript("dna-pca3.pdf",fmt="pdf")
+
+#Figure 8.11
+
+aa<-plot3darcs(ans,c=1,pcno=1,view.theta=-45,view.phi=-50)
+rgl.postscript("dna-pns1.pdf",fmt="pdf")
+aa<-plot3darcs(ans,c=1,pcno=2,view.theta=-45,view.phi=-50)
+rgl.postscript("dna-pns2.pdf",fmt="pdf")
+aa<-plot3darcs(ans,c=1,pcno=3,view.theta=-45,view.phi=-50)
+rgl.postscript("dna-pns3.pdf",fmt="pdf")
 
 
 

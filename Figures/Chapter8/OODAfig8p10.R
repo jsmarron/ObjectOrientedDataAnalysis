@@ -1,19 +1,18 @@
 #%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-# R code to reproduce Figure 7.13 from the book by 
+# R code to reproduce Figure 8.10 from the book by 
 # J.S. Marron and Ian L. Dryden on Object Oriented Data Analysis
 
-# Requires the shapes and rgl library installing: e.g. install.packages("shapes")
+# Requires the shapes library installing:  install.packages("shapes")
 
-# Note that this produces 3D rgl views, which are then rotated by hand 
-# to give the views in the Figure. 
 
 #%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 library(shapes)
+library(rgl)
 set.seed(10)
 
-#read in data
+
 tfc<-read.in("../../DataSets/DNA-12groups/TFC_P.x",22,3)
 
 
@@ -69,18 +68,32 @@ for ( i in 1:50){
 
 #with scaling
 
-shapes3d(dnarot,joinline=jj)
-shapes3d(procGPA(dnarot,scale=TRUE)$rotated,joinline=jj,col=3)
+#shapes3d(dnarot,joinline=jj)
+#shapes3d(procGPA(dnarot,scale=TRUE)$rotated,joinline=jj,col=3)
+
+#########################################################################################
+
+## Note that we have different possible choices for Procrustes tangent coordinates. 
+
+## Using partial Procrustes tangent coordinates: 
+
+ans<-procGPA(dnarot,scale=TRUE,tangentcoords="partial")
+ans$scores[,1]<-ans$scores[,1]*(-1)  #flip signs to match the book view
+ans$scores[,3]<-ans$scores[,3]*(-1)  #flip signs to match the book view
+pairs(cbind(ans$size,ans$scores[,1:3]),labels=c("size","PC1","PC2","PC3"))
+ans$percent
 
 
-#ans<-procGPA(dnarot,scale=TRUE)
-#pairs(cbind(ans$size,ans$scores[,1:3]),labels=c("size","PC1","PC2","PC3"))
-#cor(ans$size,ans$scores[,1])
-# 0.5486125
-#cor(ans$size,ans$scores[,2])
-# 0.5984227
-#cor(ans$size,ans$scores[,3])
-# -0.4228053
+#The actual plot seen in Figure 8.10 uses the Procrustes residuals  
+#as approximate tangent coordinates. Here the choices of tangent coordinates are extremely similar. 
+#Note the scaling of the scores is different, but the pairwise plots are extremely similar
+#up to a common scale.
+
+ans<-procGPA(dnarot,scale=TRUE,tangentcoords="residual")
+pairs(cbind(ans$size,ans$scores[,1:3]),labels=c("size","PC1","PC2","PC3"))
+ans$percent
+
+
 
 
 
