@@ -1,6 +1,6 @@
 disp('Running MATLAB script file OODAfig2p2.m') ;
 %
-%    Makes Figure 2.2 of the OODA book,
+%    Makes Figure 1.9 of the OODA book,
 %    Which Constructed Simple Examples, 
 %    Illustrating Decomposition into Phase and Amplitude Variation
 %
