@@ -9,27 +9,17 @@ disp('Running MATLAB script file OODAfig3p3.m') ;
 %
 
 
-%  Set up preliminaries
-%
-d = 2 ;
+datafilestr = '..\..\DataSets\2dToyExampleData' ;
 xgrid = [1; 2] ;
 
-n = 12 ;
-mu = [3.3; 0.6] ;
-msig = [0.08 0; 0 0.08] ;
-randn('state',75029743095) ;
-mz = randn(d,n) ;
-mdata = sqrtm(msig) * mz + vec2matSM(mu,n) ;
 
-mu = [2.5; 3.8] ;
-msig = [0.05 0; 0 0.05] ;
-mz = randn(d,n) ;
-mdata = [mdata (sqrtm(msig) * mz + vec2matSM(mu,n))] ;
+%  Read in data
+%
+mdata = xlsread(datafilestr) ;
 
 
 %  Do preliminary calculations
 %
-
 d = size(mdata,1) ;
     %  dimension of each data curve
 n = size(mdata,2) ;

@@ -5,6 +5,7 @@ disp('Running MATLAB script file OODAfig3p5.m') ;
 %                       2-d toy data
 %                       Spanish Male Mortality data
 %                       10-d toy data
+%                       Lung Cancer data
 %
 %    Copied from OODAbookChpBFigYScree.m
 %    in:        OODAbook\ChapterB
@@ -23,22 +24,12 @@ lw = 2 ;
 %
 subplot(2,2,1) ;
 
-%  Generate data using lines from OODAbookChpBFigD.m
-% 
-d = 2 ;
+datafilestr = '..\..\DataSets\2dToyExampleData' ;
 xgrid = [1; 2] ;
-n = 12 ;
 
-mu = [3.3; 0.6] ;
-msig = [0.08 0; 0 0.08] ;
-randn('state',75029743095) ;
-mz = randn(d,n) ;
-mdata1 = sqrtm(msig) * mz + vec2matSM(mu,n) ;
-
-mu = [2.5; 3.8] ;
-msig = [0.05 0; 0 0.05] ;
-mz = randn(d,n) ;
-mdata1 = [mdata1 (sqrtm(msig) * mz + vec2matSM(mu,n))] ;
+%  Read in data
+%
+mdata1 = xlsread(datafilestr) ;
 
 %  Do PCA
 %
@@ -173,7 +164,7 @@ subplot(2,2,4) ;
 
 %  Load data using lines from OODAbookChpBFigX.m
 %
-mdata4 = xlsread('OODAbookChpBFigQdata.xlsx','Sheet1','B3:KO12480') ;
+mdata4 = xlsread('..\..\DataSets\PanCancerData.xlsx','Sheet1','B3:KO12480') ;
 
 %  Do PCA
 %
