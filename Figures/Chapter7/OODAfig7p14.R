@@ -30,16 +30,13 @@ D1<- Gamma%*% diag(ev1) %*%t(Gamma)
 D2<- Gamma2%*% diag(ev2) %*%t(Gamma2)
 
 
-LD1<- Gamma%*% diag(log( ev1)  ) %*%t(Gamma)
-LD2<- Gamma2%*% diag(log( ev2) ) %*%t(Gamma2)
-
-
 nseries<-6
 res1<-array(0,c(3,3,nseries))
 res2<-array(0,c(3,3,nseries))
 res3<-array(0,c(3,3,nseries))
 res4<-array(0,c(3,3,nseries))
 res5<-array(0,c(3,3,nseries))
+
 
 for (iw in 1:(nseries-1) ){
 
@@ -50,16 +47,6 @@ nw<- f1+f2
 
 Q1<-chol(D1)
 Q2<-chol(D2)
-Qdat<-array(0,c(4,3,nw))
-H<-defh(3)
-
-for (i in 1:f1){
-Qdat[,,i]<-t(H)%*%t(Q1)
-}
-for (i in (f1+1):nw){
-Qdat[,,i]<-t(H)%*%t(Q2)
-}
-
 
 Darray<-array( 0, c(3,3,2) )
 Darray[,,1]<-D1
@@ -70,43 +57,34 @@ k<-3
 
 weights<- c(f1/nw,f2/nw)
 
+#log-Euclidean
 Dlog <- estLogEuclid(Darray,weights)
+
+#Riemannian
 Driem <- estLogRiem2(Darray,weights)
 
-
-######################################################################
-
 #Procrustes size-and-shape
-Q5star <- (f1 * t(Q1) + f2 * H%*% procOPA( t(H)%*%t(Q1) , t(H)%*%t(Q2) , scale=FALSE, 
-reflect=TRUE)$Bhat)/nw
-D5star<- Q5star%*%t(Q5star)  # transformation in the 2009 paper 
-D5<-D5star
-
+Dproc <- estSS( Darray, weights=weights )
 
 #Cholesky
 Q6 <- (f1 * t(Q1) + f2 * t(Q2))/nw
-D6<- Q6%*%t(Q6)
-
-
-#Log-Euclidean
-AA<- f1*LD1/nw + f2*LD2/nw 
-ev<-eigen(AA,symmetric=TRUE)
-D3<- ev$vectors%*%diag(exp(ev$values))%*%t(ev$vectors)
-
+Dchol<- Q6%*%t(Q6)
 
 #Euclidean
-D4 <- (f1*D1+f2*D2)/nw
+Deuc <- (f1*D1+f2*D2)/nw
 
 
 
-res1[,,iw]<-D3
-res2[,,iw]<-D4
-res3[,,iw]<-D5
-res4[,,iw]<-D6
+res1[,,iw]<-Dlog
+res2[,,iw]<-Deuc
+res3[,,iw]<-Dproc
+res4[,,iw]<-Dchol
 res5[,,iw]<-Driem
 
-rgl.clear()
 }
+
+
+
 
 res1[,,nseries]<-D2
 res2[,,nseries]<-D2
@@ -117,6 +95,8 @@ res4[,,nseries]<-D2
 
 #This figure was in Dryden, Koloydeno, Zhou (2009) AOAS
 
+rgl.open()
+rgl.bg(color = "white")
 rgl.clear()
 
 wire3d(ellipse3d( D1 ,centre = c(0,0,0), level=0.05),xlab=" ",ylab=" ",
