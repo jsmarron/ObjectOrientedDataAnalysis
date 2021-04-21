@@ -11,16 +11,14 @@
 #%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 library(rgl)
-setwd("/Users/pmzild/OneDrive - The University of Nottingham/tex/OODA/OODA-Data-R-Figures")
 
-
-x<-scan("./Data/DTIpart/directions15.txt")
+x<-scan("../../DataSets/DTI/directions15.txt")
 k<-length(x)/3
 
 #############################file
 nx<-50
 ny<-20
-z<-scan("./Data/DTIpart/part50x20.csv",sep=",")
+z<-scan("../../DataSets/DTI/part50x20.csv",sep=",")
 #####################################
 
 

@@ -16,14 +16,7 @@ set.seed(10)
 
 
 #read in data
-tfc<-read.in("../../DataSets/DNA-12groups/TFC_P.x",22,3)
-
-
-thin<-tfc[,,(1:50)*50]
-
-#ans<-procGPA(thin,scale=FALSE)
-#shapes3d(ans$rotated)
-#pairs(cbind(ans$size,ans$scores[,1:3]))
+thin<-read.in("../../DataSets/DNA/DNA-TFC50.txt",22,3)
 
 dna.tfc<-array(0,c(22,3,2))
 dna.tfc[,,1]<-thin[,,1]
@@ -34,7 +27,6 @@ jj<-c(11:1,22,21,2,3,20,19,4,5,18,17,6,7,16,15,  8,9,14,13, 10, 11, 12:22)
 cc<-c(rep(2,times=22),rep(4,times=22))
 a<-matrix( rnorm(9), 3,3)
 R <- eigen(a%*%t(a))$vectors
-#determinant(R,logarithm=FALSE)
 C<-t(defh(21))%*%defh(21)
 
 dna1<-abind(dna.tfc[,,1], dna.tfc[,,2])
@@ -67,7 +59,3 @@ print(2*sin(riemdist(A,B)/2))
 #[1] 0.1462706
 
 #################
-
-
-
-
