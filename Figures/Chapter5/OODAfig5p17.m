@@ -10,8 +10,6 @@ disp('Running MATLAB script file OODAfig5p17.m') ;
 %
 %
 
-iskipcalc = 0 ;    %  Set this to 1 not not redo Fisher Rao calculation
-
 %  Set basics
 %
 d = 1001 ;
@@ -65,12 +63,11 @@ end ;
 plot(xgrid,mean(mfi,2),'k--','Linewidth',LinewidthMean) ;
 hold off ;
 
-if ~(iskipcalc == 1) ;
-  %  Run Fisher Rao Decomposition
-  %
-  %addpath('C:\Users\marron\Documents\Research\MatlabSoftware\FRwarping-PNS\DerekTuckerSoftware','-end') ;
-  [fn,qn,q0,fmean,mqn,gam] = time_warping(mfi,xgrid) ;
-end ;
+
+%  Run Fisher Rao Decomposition
+%
+%addpath('C:\Users\marron\Documents\Research\MatlabSoftware\FRwarping-PNS\DerekTuckerSoftware','-end') ;
+[fn,qn,q0,fmean,mqn,gam] = time_warping(mfi,xgrid) ;
 
 
 %  Show Amplitude Variation
