@@ -3,7 +3,7 @@ This directory contains graphics and code for reproducing figures in Chapter 4.
 
 Additional Notes:
 
-Figure 4.1 is created as the top row in the file OODAfig4p1A.png and the remaining rows in OODAfig4p1B.png.  The additional OODAfig4p1B.png shows the full output of a curvdatSM analysis, for obtaining the sums of squares given in the discussion.  
+Figure 4.1 is created as the top row in the file OODAfig4p1A.png and the remaining rows in OODAfig4p1B.png.  The additional OODAfig4p1C.png shows the full output of a curvdatSM analysis, for obtaining the sums of squares given in the discussion.  
 
 The data set TiltedParabolasData.xlsx is also created in OODAfig4p1.m, to be read by other programs using this data.
 
