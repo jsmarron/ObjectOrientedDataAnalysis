@@ -21,7 +21,7 @@ if ipart == 0 ;    %  Collect and save data
 
   %  Load Data
   %
-  infilestr = '..\..\..\..\Research\Bioinf\GeneArray\TCGA-PanCan\PanCan2.mat' ;
+  infilestr = ..\..\..\..\Research\Bioinf\GeneArray\TCGA-PanCan\PanCan2.mat
   load('infilestr') ;
       %    Loads Variables:
       %        mdata          Matrix of Gene Expression
