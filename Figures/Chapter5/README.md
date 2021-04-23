@@ -11,4 +11,9 @@ Figure 5.13 is created as the top row in the file OODAfig5p13A.png and the remai
 
 Figure 5.14 is created as the top row in the file OODAfig5p14A.png and the remaining rows in OODAfig5p14B.png.  The additional OODAfig5p14C.png shows the full output of a curvdatSM analysis, for obtaining the sums of squares given in the discussion.  
 
+The data set PanCancerData2.xlsx is created in OODAfig5p16.m.  This is different from PanCancerData.xlsx because it is a different subset of the full data set.  It draws data from the file PanCan2.mat, which can be found at:
+https://marronwebfiles.sites.oasis.unc.edu/DataSets/TCGA/PanCan/PanCan2.mat
+Main Figure for the paper is in:    OODAfig5p16A.png
+Numerical Output used in Table 5.2 is in:    OODAfig5p16.xlsx
+Graphical version of the DiProPerm Analyses of this data are in:    OODAfig5p16B.png  &  OODAfig5p16C.png
 
