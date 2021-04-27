@@ -35,6 +35,8 @@ PanCancerData2.xlsx:  created by:  OODAfig5p16.m, used by:  OODAfig13p3.m
 
 PanCanAllKidneyData.xlsx:  created by:  OODAfig15p10.m
 
+ParabolasAndOutlierData.xlsx:  created by:  OODAfig16p2.m, used by:  OODAfig16p4.m
+
 ShiftedCorrelatedGaussiansData.xlsx:  created by:  OODAfig11p1.m, used by OODAfig11p2.m, OODAfig11p4.m
 
 SpanishMaleMortalityData.xlsx:  created by:  OODAfig1p1.m, used by:  OODAfig1p2.m - OODAfig1p6.m, OODAfig3p5.m, OODAfig5p1.m - OODAfig5p2.m
@@ -48,12 +50,6 @@ TwoClassGaussianData.xlsx:  created by:  OODAfig6p5.m, used by:  OODAfig6p6.m, O
 TwoClustersData.xlsx:  created by:  OODAfig6p1.m, used by:  OODAfig6p7.m
 
 TwoScaleCurvesData.xlsx:  created by:  OODAfig5p14.m, used by:  OODAfig5p15.m
-
-BritishFamilyIncomesData.xlsx:  created by:  OODAfig15p7.m
-
-PanCanAllKidneyData.xlsx:  created by:  OODAfig15p10.m
-
-.xlsx:  created by:  , used by:
 
 .xlsx:  created by:  , used by:
 
