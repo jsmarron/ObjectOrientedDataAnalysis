@@ -7,6 +7,10 @@ Following is the program that created each one, and those that call them:
 
 2dToyExampleData.xlsx:  created by:  OODAfig3p1.m, used by:  OODAfig3p2.m - OODAfig3p5.m, OODAfig6p8.m
 
+BralowerFossilsData.xlsx:  created by:  OODAfig15p6.m, used by:  OODAfig15p6.m
+
+BritishFamilyIncomesData.xlsx:  created by:  OODAfig15p7.m
+
 CheckerboardData.xlsx:  created by:  OODAfig11p7.m
 
 DonutData.xlsx:  created by:  OODAfig11p6.m
@@ -15,11 +19,13 @@ DrugDiscoveryData.xlsx:  created by:  OODAfig5p3.m, used by:  OODAfig5p4.m - OOD
 
 FourClusterData.xlsx:  created by:  OODAfig11p8.m, used by:  OODAfig11p9.m, OODAfig12p1.m, OODAfig12p3.m - OODAfig12p6.m, OODAfig13p5.m - OODAfig13p7.m
 
+HidalgoStampsData.xlsx:  created by:  OODAfig15p1.m, used by:  OODAfig15p2.m - OODAfig15p4.m
+
 HighDimensionalGaussianData.xlsx:  created by:  OODAfig12p1.m, used by:  OODAfig12p8.m - OODAfig12p9.m
 
-LungCancerData.xlsx:  created by:  OODAfig4p5.m, used by:  OODAfig4p6.m - OODAfig4p8.m, OODAfig6p13.m
+LungCancerData.xlsx:  created by:  OODAfig4p5.m, used by:  OODAfig4p6.m - OODAfig4p8.m, OODAfig6p13.m, OODAfig13p11.m - OODAfig13p12.m
 
-MassFluxData.xlsx:  created by:  OODAfig12p10.m, used by:
+MassFluxData.xlsx:  created by:  OODAfig12p10.m, used by:  OODAfig15p9.m
 
 OverlappingClassesData.xlsx:  created by:  OODAfig4p12.m, used by:  OODAfig4p13.m, OODAfig13p2.m
 
@@ -41,11 +47,7 @@ TwoClustersData.xlsx:  created by:  OODAfig6p1.m, used by:  OODAfig6p7.m
 
 TwoScaleCurvesData.xlsx:  created by:  OODAfig5p14.m, used by:  OODAfig5p15.m
 
-.xlsx:  created by:  , used by:
-
-.xlsx:  created by:  , used by:
-
-.xlsx:  created by:  , used by:
+BritishFamilyIncomesData.xlsx:  created by:  OODAfig15p7.m
 
 .xlsx:  created by:  , used by:
 
