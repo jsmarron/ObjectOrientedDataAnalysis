@@ -4,7 +4,7 @@ disp('Running MATLAB script file OODAfig16p2.m') ;
 %    Parabolas and Outlier Data, PCA curvdat
 %
 %    Copied from OODAbookChpOFigC10dToynOut.m
-%    in:        OODAbook\ChapterN
+%    in:        OODAbook\ChapterO
 %
 
 ipart = 1 ;    %  0 - generate and save data

@@ -39,6 +39,8 @@ ParabolasAndOutlierData.xlsx:  created by:  OODAfig16p2.m, used by:  OODAfig16p4
 
 ShiftedCorrelatedGaussiansData.xlsx:  created by:  OODAfig11p1.m, used by OODAfig11p2.m, OODAfig11p4.m
 
+SineWaveData.xlsx:  created by:  OODAfig17p1.m, used by:  OODAfig17p2.m - OODAfig17p6.m
+
 SpanishMaleMortalityData.xlsx:  created by:  OODAfig1p1.m, used by:  OODAfig1p2.m - OODAfig1p6.m, OODAfig3p5.m, OODAfig5p1.m - OODAfig5p2.m
 
 TiltedParabolasData.xlsx:  created by:  OODAfig4p1.m, used by:  OODAfig4p2.m, OODAfig3p5.m
@@ -50,8 +52,4 @@ TwoClassGaussianData.xlsx:  created by:  OODAfig6p5.m, used by:  OODAfig6p6.m, O
 TwoClustersData.xlsx:  created by:  OODAfig6p1.m, used by:  OODAfig6p7.m
 
 TwoScaleCurvesData.xlsx:  created by:  OODAfig5p14.m, used by:  OODAfig5p15.m
-
-.xlsx:  created by:  , used by:
-
-.xlsx:  created by:  , used by:
 
