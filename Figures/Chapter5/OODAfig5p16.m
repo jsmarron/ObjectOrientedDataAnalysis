@@ -5,6 +5,8 @@ disp('Running MATLAB script file OODAfig5p16.m') ;
 %                           (Ovarian and Uterine cancers)
 %    Shows impact of log transformation
 %
+%    Also generates Excel file with numbers for Table 5.2
+%
 %    Copied from OODAbookChpDFigL.m
 %    in:        OODAbook\ChapterD
 %

@@ -15,5 +15,5 @@ The data set LungCancerData.xlsx is created in OODAfig4p5.m, to be read by other
 
 The data set PanCancerData.xlsx was copied from OODAbookChpBFigQdata.xlsx in OODAbook\ChapterB.  It is used in OODAfig3p5.m, OODAfig4p9.m - OODAfig4p11.m, OODAfig11p13.m, OODAfig13p3.m, OODAfig13p8.m - OODAfig13p9.m and OODAfig15p5.m - OODAfig15p6.m.
 
-The data set OverlappingClassesData.xlsx is created in OODAfig4p12.m, to be read by other programs using this data.  It is used in OODAfig4p13.m and It is used in OODAfig13p2.m
+The data set OverlappingClassesData.xlsx is created in OODAfig4p12.m, to be read by other programs using this data.  It is used in OODAfig4p13.m
 
