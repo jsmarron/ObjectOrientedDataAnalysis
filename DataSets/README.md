@@ -45,6 +45,8 @@ SineWaveData.xlsx:  created by:  OODAfig17p1.m, used by:  OODAfig17p2.m - OODAfi
 
 SpanishMaleMortalityData.xlsx:  created by:  OODAfig1p1.m, used by:  OODAfig1p2.m - OODAfig1p6.m, OODAfig3p5.m, OODAfig5p1.m - OODAfig5p2.m
 
+TICCurvesData.txt:  This was the file:  TIC_Chromatographs_Preprocessed.txt from the now defunct website: http://www.mbi.osu.edu/2012/stwresources.html
+
 TiltedParabolasData.xlsx:  created by:  OODAfig4p1.m, used by:  OODAfig4p2.m, OODAfig3p5.m
 
 TwinArchesData.xlsx:  created by:  OODAfig4p3.m, used by:  OODAfig4p4.m OODAfig6p9.m - OODAfig6p12.m

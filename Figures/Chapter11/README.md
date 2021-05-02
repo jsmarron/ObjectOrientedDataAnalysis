@@ -13,5 +13,7 @@ The data set FourClusterData.xlsx is created in OODAfig11p8.m, to be read by oth
 
 The t-SNE analysis in OODAfig11p8.m uses the Matlab t-SNE software of Laurens van der Maaten, 2010.  Must be in the Matlab path.
 
+Figure 11.10 is from Figure 4 of Nelson, A. E., Fang, F., Arbeeva, L., Cleveland, R. J., Schwartz, T. A., Callahan, L. F., Marron, J.S. & Loeser, R. F. (2019). A machine learning approach to knee osteoarthritis phenotyping: data from the FNIH Biomarkers Consortium. Osteoarthritis and cartilage, 27(7), 994-1001.
+
 
 
