@@ -39,7 +39,7 @@ ParabolasAndOutlierData.xlsx:  created by:  OODAfig16p2.m, used by:  OODAfig16p4
 
 ShiftedCorrelatedGaussiansData.xlsx:  created by:  OODAfig11p1.m, used by OODAfig11p2.m, OODAfig11p4.m
 
-ShiftedBetasData.xlsx:  created by:  OODAfig9p2.m, used by OODAfig9p3.m, 
+ShiftedBetasData.xlsx:  created by:  OODAfig9p2.m, used by OODAfig9p3.m, OODAfig9p91011.m and OODAfig9p14.m
 
 SineWaveData.xlsx:  created by:  OODAfig17p1.m, used by:  OODAfig17p2.m - OODAfig17p6.m
 
