@@ -10,5 +10,5 @@ Figures 8.7, 8.8, 8.12 and 8.13 were generated using the R package shapes, with 
 
 Figures 8.9 - 8.11 were generated using the R package shapes, using the data in "DNA" in the DataSets folder on this site. 
 
-
+Figures 8.14 - 8.15 were generated in R, using the data in "DTI" in the DataSets folder on this site. 
 
