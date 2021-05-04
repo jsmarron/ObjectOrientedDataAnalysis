@@ -12,6 +12,7 @@ While the mathematics go far beyond the usual in statistics (including different
 Key words or phrases:  Complex Data, Functional Data, High Dimensional Data, Manifold Statistics, Modes of Variation, Multivariate Statistics.
 
 Author Contacts:
+
 J. S. Marron
 Department of Statistics and OR
 University of North Carolina
