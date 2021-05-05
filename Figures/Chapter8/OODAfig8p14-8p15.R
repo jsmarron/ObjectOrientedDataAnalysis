@@ -1,5 +1,14 @@
 #%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+# R code to reproduce Figure 10.8 from the book by 
+# J.S. Marron and Ian L. Dryden on Object Oriented Data Analysis
+
+# Requires the network and GGally libraries installing
+
+#%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+#%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 # R code to reproduce Figure 8.14 and 8.15 from the book by 
 # J.S. Marron and Ian L. Dryden on Object Oriented Data Analysis
 
@@ -69,8 +78,7 @@ S<-rep(0,times=k)
 ssq<-0
 for (i in 1:k){
 S[i]<-S0*exp(-b*t(g[,i]%*%Q1%*%t(Q1)%*%g[,i]))
-ssq<- ssq + (y[i]-S[i])**2    
-}
+ssq<- ssq + (y[i]-S[i])**2 }
 sig2<-ssq/k
 sqrt(sig2)
 }
@@ -125,7 +133,6 @@ y<-Sdata[2:(k+1),obs]
 b<-1
 xi<-1
 I3<-diag(3)
-
 
 
 
@@ -188,14 +195,13 @@ plottensor(D1*FA,g,y,S0,mu=c(ix,iy,0)*1,7)
 
 
 
+
 palette(heat.colors(100))
 
 par(mfrow=c(1,3))
 image(FAgrid,col=palette(heat.colors(seq(0,.9,len=100))),axes=FALSE)
 image(rhogrid,col=palette(heat.colors(seq(0,.9,len=100))),axes=FALSE)
 image(GAgrid,col=palette(heat.colors(seq(0,.9,len=100))),axes=FALSE)
-
-
 
 
 
