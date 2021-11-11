@@ -23,9 +23,9 @@ USA
 Ian L. Dryden
 Department of Mathematics and Statistics
 Florida International University
-11200 SW 8th Street, DM 430
+11200 SW 8th Street, DM 403B
 Miami, FL 33199 
 USA
-+44-115-846-7412
++1-305-348-1081
 
 
